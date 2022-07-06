@@ -71,7 +71,7 @@ export class App extends Component  {
     return (
       <div>
         <FeedbackOptions
-          onGoodFeedvack={this.countGoodFeedback}
+          onGoodFeedback={this.countGoodFeedback}
           onNeutralFeedback={this.countNeutralFeedback}
           onBadFeedback={this.countBadFeedback}
         />
