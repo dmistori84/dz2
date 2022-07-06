@@ -3,12 +3,7 @@ import { Component } from 'react';
 import { FeedbackOptions } from './component/FeedbackOptions/FeedbackOptions';
 import { Statistics } from './component/Statistics/Statistics';
 
-export class App extends Component  {
-  // static defaultProps = {
-  //   total: 0,
-  //   positivePercentage: 0,
-  // };
-  
+export class App extends Component  {  
   state = {
     good: 0,
     neutral: 0,
@@ -34,55 +29,21 @@ export class App extends Component  {
   }
 
   countTotalFeedback () { 
-     
-    //let total;
     return (this.state.good + this.state.neutral + this.state.bad);
-  
-    //   this.setState(() => {
-    //   let { total } = this.props;
-    //     return {
-    //     total: (this.state.good + this.state.neutral + this.state.bad)
-    //   }
-    //  }
-    //  )
-  //  let { total } = this.props;
-  //   return (
-  //     this.setState({
-  //       total: 1
-  //   })
-  //   )
-  
-    // return (
-    //   this.setState(prev => {
-    //     return {
-    //       total: prev.good,
-    //     }
-    //   })
-    // )
-   }   
-
+  }  
   
   countPositiveFeedbackPercentage = () => { 
-    //let positivePercentage;
     return 100 * this.state.good / (this.state.good + this.state.neutral + this.state.bad)
   }
 
   render() { 
-    //let { total, positivePercentage } = this.props;
     return (
       <div>
         <FeedbackOptions
           onGoodFeedback={this.countGoodFeedback}
           onNeutralFeedback={this.countNeutralFeedback}
           onBadFeedback={this.countBadFeedback}
-        />
-        {/* <div>
-          <h3>FeedbackOptions</h3> 
-          <button onClick={this.countGoodFeedback}>Good</button>
-          <button onClick={this.countNeutralFeedback}>Neutral</button>
-          <button onClick={this.countBadFeedback}>Bad</button>
-        </div> */}
-        
+        />      
         <Statistics
           good={this.state.good}
           neutral={this.state.neutral}
@@ -90,18 +51,7 @@ export class App extends Component  {
           total={this.countTotalFeedback()}
           positivePercentage={Number(this.countPositiveFeedbackPercentage()).toFixed(0)}
         />
-        {/* <div>
-          <h3>Statistics</h3>
-          <ul>
-            <li>Good: {this.state.good}</li>
-            <li>Neutral: {this.state.neutral}</li>
-            <li>Bad: {this.state.bad}</li>
-            <li>Total: {this.countTotalFeedback()}</li>
-            <li>Positive feedback: {this.countPositiveFeedbackPercentage().toFixed(0)}%</li>
-          </ul>
-        </div>                */}
-      </div>
-      
+      </div>    
   );
   }
 }
