@@ -1,4 +1,4 @@
-//import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 
 export const FeedbackOptions = ({ onGoodFeedback, onNeutralFeedback, onBadFeedback }) => (
     <div>
@@ -9,8 +9,8 @@ export const FeedbackOptions = ({ onGoodFeedback, onNeutralFeedback, onBadFeedba
     </div>
 );
 
-// FeedbackOptions.propTypes = {
-//     onGoodFeedback: PropTypes.func,
-//     onNeutralFeedback: PropTypes.func,
-//     onBadFeedback: PropTypes.func
-// };
+FeedbackOptions.propTypes = {
+    onGoodFeedback: PropTypes.func,
+    onNeutralFeedback: PropTypes.func,
+    onBadFeedback: PropTypes.func
+};

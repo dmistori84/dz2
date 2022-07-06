@@ -33,17 +33,18 @@ export class App extends Component  {
     }))
   }
 
-  countTotalFeedback = () => { 
-    //let { total } = this.props;
+  countTotalFeedback () { 
+     
     //let total;
-    return this.state.good + this.state.neutral + this.state.bad;
+    return (this.state.good + this.state.neutral + this.state.bad);
   
     //   this.setState(() => {
-  //     return {
-  //       total: this.state.good + this.state.neutral + this.state.bad
-  //     }
-  //   }
-  //   )
+    //   let { total } = this.props;
+    //     return {
+    //     total: (this.state.good + this.state.neutral + this.state.bad)
+    //   }
+    //  }
+    //  )
   //  let { total } = this.props;
   //   return (
   //     this.setState({
