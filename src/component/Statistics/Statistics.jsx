@@ -24,4 +24,4 @@ Statistics.propTypes = {
     neutral: PropTypes.number,
     totalFeedback: PropTypes.number,
     positivPercentage: PropTypes.number
-}
+};

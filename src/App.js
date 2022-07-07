@@ -2,6 +2,7 @@ import './App.css';
 import { Component } from 'react';
 import { FeedbackOptions } from './component/FeedbackOptions/FeedbackOptions';
 import { Statistics } from './component/Statistics/Statistics';
+import { Section } from './component/Section/Section';
 
 export class App extends Component  {  
   state = {
@@ -39,18 +40,22 @@ export class App extends Component  {
   render() { 
     return (
       <div>
-        <FeedbackOptions
+        <Section>
+          <FeedbackOptions
           onGoodFeedback={this.countGoodFeedback}
           onNeutralFeedback={this.countNeutralFeedback}
           onBadFeedback={this.countBadFeedback}
-        />      
-        <Statistics
+        /> 
+        </Section>
+        <Section>
+          <Statistics
           good={this.state.good}
           neutral={this.state.neutral}
           bad={this.state.bad}
           total={this.countTotalFeedback()}
           positivePercentage={Number(this.countPositiveFeedbackPercentage()).toFixed(0)}
         />
+        </Section>  
       </div>    
   );
   }
