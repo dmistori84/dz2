@@ -40,14 +40,14 @@ export class App extends Component  {
   render() { 
     return (
       <div>
-        <Section>
+        <Section title="Please leave feedback">
           <FeedbackOptions
           onGoodFeedback={this.countGoodFeedback}
           onNeutralFeedback={this.countNeutralFeedback}
           onBadFeedback={this.countBadFeedback}
         /> 
         </Section>
-        <Section>
+        <Section title="Statistics">
           <Statistics
           good={this.state.good}
           neutral={this.state.neutral}
