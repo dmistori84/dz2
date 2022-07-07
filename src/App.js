@@ -42,18 +42,18 @@ export class App extends Component  {
       <div>
         <Section title="Please leave feedback">
           <FeedbackOptions
-          onGoodFeedback={this.countGoodFeedback}
-          onNeutralFeedback={this.countNeutralFeedback}
-          onBadFeedback={this.countBadFeedback}
+            onGoodFeedback={this.countGoodFeedback}
+            onNeutralFeedback={this.countNeutralFeedback}
+            onBadFeedback={this.countBadFeedback}
         /> 
         </Section>
         <Section title="Statistics">
           <Statistics
-          good={this.state.good}
-          neutral={this.state.neutral}
-          bad={this.state.bad}
-          total={this.countTotalFeedback()}
-          positivePercentage={Number(this.countPositiveFeedbackPercentage()).toFixed(0)}
+            good={this.state.good}
+            neutral={this.state.neutral}
+            bad={this.state.bad}
+            total={this.countTotalFeedback()}
+            positivePercentage={Number(this.countPositiveFeedbackPercentage()).toFixed(0)}
         />
         </Section>  
       </div>    
